@@ -7,12 +7,10 @@ class Formatter {
     return str.replace(/[^A-Za-z0-9-' ]+/g, "");
   }
   static titleize(str) {
-    const except = ["the", "a", "an", "but", "of", "and", "for", "at", "by", "from"];
     const lowStrArr = str.split(" ")
     const result = lowStrArr
       .map((word) => {
         if (!(word === "the" || word === "a" || word === "an" || word === "but" || word === "of" || word === "and" || word === "for" || word === "at" || word === "by" || word === "from")) {
-          // console.log(this.capitalize(word))
           return (this.capitalize(word))
         }
         else {
@@ -25,4 +23,3 @@ class Formatter {
     return (result.join(" "));
   }
 }
-Formatter.titleize("Chicken Soup With Rice and a Few other Songs");
